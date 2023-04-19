@@ -15,5 +15,8 @@
     "sourceMap": true,
     "noPropertyAccessFromIndexSignature": true,
     "skipLibCheck": true
+  },
+  "ts-node": {
+    "esm": true
   }
 }
