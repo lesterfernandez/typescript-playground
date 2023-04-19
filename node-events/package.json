@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Lester Fernandez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
 }

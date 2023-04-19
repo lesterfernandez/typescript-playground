@@ -6,5 +6,8 @@ then
 fi
 
 mkdir $1
-cp base/tsconfig.json $1
+cp base/tsconfig.json base/index.ts  $1
 cat base/package.json | sed "s/base/$1/" > $1/package.json
+cd $1
+npm i
+cd ..
