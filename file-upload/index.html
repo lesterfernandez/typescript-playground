@@ -15,7 +15,29 @@
   </style>
   <body>
     <h1>Upload Service</h1>
-    <input type="file" name="file" placeholder="Choose a file" />
-    <button type="submit">Submit</button>
+    <form id="file-form">
+      <label>
+        <input
+          type="file"
+          name="file"
+          id="file-input"
+          placeholder="Choose a file"
+        />
+      </label>
+      <button type="submit" id="file-submit">Submit</button>
+    </form>
   </body>
+  <script>
+    const fileSubmitButton = document.getElementById("file-submit");
+    const fileInput = document.getElementById("file-input");
+    const fileForm = document.getElementById("file-form");
+    fileForm.addEventListener("submit", ev => {
+      ev.preventDefault();
+      const file = fileInput.files[0];
+      fetch("127.0.0.1:8080", {
+        method: "POST",
+        body: file,
+      });
+    });
+  </script>
 </html>
