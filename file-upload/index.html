@@ -34,7 +34,7 @@
     fileForm.addEventListener("submit", ev => {
       ev.preventDefault();
       const file = fileInput.files[0];
-      fetch("127.0.0.1:8080", {
+      fetch("127.0.0.1:8080/upload", {
         method: "POST",
         body: file,
       });
